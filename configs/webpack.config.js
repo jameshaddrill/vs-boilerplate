@@ -59,15 +59,15 @@ module.exports = {
     plugins: [
         new StylelintPlugin({
             files: "./src/**/*.{scss,vue}",
-			configFile: "./configs/stylelintrc.json",
-			failOnError: true			
+            configFile: "./configs/stylelintrc.json",
+            failOnError: true,
         }),
         new MiniCssExtractPlugin({
             filename: "bundle.css",
         }),
         new VueLoaderPlugin(),
         new HTMLWebpackPlugin({
-			showErrors: true,
+            showErrors: true,
             filename: "index.html",
             template: path.resolve(__dirname, "../src/index.html"),
             inject: true,
