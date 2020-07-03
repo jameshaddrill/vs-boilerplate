@@ -1,18 +1,33 @@
 <template>
     <div>
-        <h1>Vue app {{ test }}</h1>
-        <div id="app" />
+        <h1>
+            Vue app
+            {{ test }}
+        </h1>
+        <div id="app">
+            <TestComponent propA="test" />
+        </div>
     </div>
 </template>
 
 <script>
+import TestComponent from './components/testComponent.vue';
+
 export default {
-    name: "App",
+    name: 'App',
+    components: {
+        TestComponent,
+    },
     data() {
         return {
-            test: "test value",
+            test: 'test value',
+            testObject: {
+                one: 'hi',
+                two: 'hello',
+            },
         };
     },
+    methods: {},
 };
 </script>
 
@@ -22,6 +37,5 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: pink;
 }
 </style>
